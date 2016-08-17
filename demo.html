@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+</head>
+<body>
+<!-- 仿google旁边的那个点点 -->
+<div class="content">
+	<div class="redBlock block"></div>
+	<div class="greenBlock block"></div>
+	<div class="blackBlock block"></div>
+	<div class="yellowBlock block"></div>
+</div>
+</body>
+<style type="text/css">
+body{
+	padding-top: 200px;
+}
+ .content{
+ 	height: 200px;
+ 	width: 200px;
+ 	margin: 0 auto;
+ }
+ .block{
+ 	position: relative;
+ 	height: 30px;
+ 	width: 30px;
+ 	border-radius: 10px;
+ 	transform:rotate(45deg)
+
+
+ }
+ .redBlock{
+ 	background: linear-gradient(225deg, rgb(221, 0, 0), rgb(238, 51, 51), rgb(255, 119, 85));
+    animation: redPos 880ms infinite alternate;
+    animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+ }
+ .greenBlock{
+ 	background: linear-gradient(90deg, rgb(0, 119, 68), rgb(0, 153, 68), rgb(85, 187, 85));
+ 	top: -30px;
+    left: 50px;
+    animation: greenPos 880ms infinite alternate;
+    animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+ }
+ .blackBlock{
+    animation: blackPos 880ms infinite alternate;
+    animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+    background: linear-gradient(315deg, rgb(0, 85, 221), rgb(0, 119, 255), rgb(0, 119, 255));
+ }
+ .yellowBlock{
+ 	background: linear-gradient(0deg, rgb(255, 170, 51), rgb(255, 204, 0), rgb(255, 221, 102));
+ 	top: -30px;
+    left: 50px;
+ 	animation: yellowPos 880ms infinite alternate;
+ 	animation-timing-function: cubic-bezier(0.42,0,0.58,1);
+ }
+ @keyframes redPos{
+ 	from {left:0px; top:0;}
+    to {left:50px;top:60px;}
+
+ }
+  @keyframes greenPos{
+ 	from {left:50px; top:-30px;}
+    to {left:0px;top:30px;}
+ }
+ @keyframes blackPos{
+ 	from {left:0px; top:0;}
+    to {left:50px;top:-60px;}
+ }
+  
+  @keyframes yellowPos{
+ 	from {left:50px; top:-30px;}
+    to {left:0px;top:-90px;}
+ }
+</style>
+</html>
